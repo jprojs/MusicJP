@@ -1,0 +1,41 @@
+{% extends 'template.html' %}
+{% block content %}
+<h2>{{ genre.name }}</h2>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Track name</th>
+      <th>Artist</th>
+      <th>Album</th>
+      <th>Duration (ms)</th>
+    </tr>
+  </thead>
+<tbody>
+{% for track in tracks %}
+    <tr>
+        <td>{{ track.track }}</td>
+        <td>{{ track.artist }}</td>
+        <td>{{ track.album }}</td>
+        <td>{{ track.duration }}</td>
+    </tr>
+{% endfor %}
+</tbody>
+</table>
+
+<div class="pagination">
+    <span class="step-links">
+        {% if tracks.has_previous %}
+            <a href="?page={{ tracks.previous_page_number }}"><<</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ tracks.number }} of {{ tracks.paginator.num_pages }}
+        </span>
+
+        {% if tracks.has_next %}
+            <a href="?page={{ tracks.next_page_number }}">>></a>
+        {% endif %}
+    </span>
+</div>
+
+{% endblock content %}

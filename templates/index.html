@@ -1,0 +1,14 @@
+{% extends 'template.html' %}
+{% block content %}
+<h1>Genres</h1>
+
+<ul>
+{% for genre in genres %}
+    <li><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>{{ genre.name }}</li>
+    <ul>
+        <li><span class="glyphicon glyphicon-align-left"></span><a href="./{{ genre.genreid }}/average"> Track length average by artist</a></li>
+        <li><span class="glyphicon glyphicon-cd"></span> <a href="./{{ genre.genreid }}/tracks"> Tracks </a></li>
+    </ul>
+{% endfor %}
+</ul>
+{% endblock content %}
