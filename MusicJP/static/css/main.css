@@ -10,6 +10,7 @@ h1 + ul ul li, h1 + ul li { list-style: none }
 .pagination a:hover, .pagination a, .pagination a:hover, .pagination a:active, .pagination a:visited,
 .pagination a:focus { text-decoration:none; color: #2aabd2 }
 
+
 /*D3 chart*/
 svg { display: block; margin: auto}
 .bar rect { fill: steelblue; }
@@ -19,4 +20,3 @@ svg { display: block; margin: auto}
 .x.axis line { stroke: #fff; stroke-opacity: .8; }
 .y.axis path { stroke: black; }
 rect:hover, rect + text { fill: white;}
-svg text { color: black !important; }
