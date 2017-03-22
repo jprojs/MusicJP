@@ -1,3 +1,4 @@
+/*Home selection*/
 $( "h1 + ul > li" ).on( "click", function() {
 
     $(this).next().slideToggle();
